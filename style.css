@@ -1,3 +1,4 @@
+/* Corpo da página */
 body {
     color: white;
     background: black;
@@ -6,6 +7,7 @@ body {
     margin-bottom: 100px;
 }
 
+/* Cabeçalho */
 header {
     border-bottom: solid 2px rgb(42, 122, 228);
     padding: 20px;
@@ -13,6 +15,7 @@ header {
     color: rgb(42, 122, 228);
 }
 
+/* Seção principal com chamada */
 .chamada {
     background: rgb(184, 156, 213);
     padding-bottom: 80px;
@@ -21,40 +24,69 @@ header {
     justify-content: center;
 }
 
+/* Texto dentro da chamada */
 .chamada-texto {
     margin-right: 5%;
 }
 
+/* Títulos principais */
 h1 {
     font-size: 40px;
 }
 
+/* Parágrafos */
 p {
     font-size: 20px;
 }
 
+/* Seção de categorias de vídeos */
 .categoria-videos {
     display: flex;
     overflow-x: auto;
     gap: 10px;
 }
 
+/* Cada categoria */
 .categoria {
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 50px;
 }
 
+/* Imagens de vídeos */
 .categoria-videos img {
     opacity: 0.5;
     height: 200px;
+    transition: opacity 0.3s ease, border 0.3s ease;
 }
 
+/* Efeito hover nas imagens */
 .categoria-videos img:hover {
     opacity: 1.0;
     border: 3px solid green;
 }
 
+/* Títulos das categorias */
 .categoria h2 {
     color: rgb(42, 122, 228);
+}
+
+/* Estilo personalizado para o nome Natan Emerenciano */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgb(42, 122, 228);
+    color: white;
+    font-size: 18px;
+    margin-top: 50px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: rgb(184, 156, 213);
 }
