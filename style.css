@@ -1,92 +1,148 @@
 /* Corpo da página */
 body {
-    color: white;
-    background: black;
-    margin: 0px;
-    font-family: "Chakra Petch", sans-serif;
+    color: #f5f5f5;
+    background: #1e1e1e;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
     margin-bottom: 100px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Cabeçalho */
 header {
-    border-bottom: solid 2px rgb(42, 122, 228);
-    padding: 20px;
-    font-size: 32px;
-    color: rgb(42, 122, 228);
+    background: linear-gradient(45deg, #2a7ae4, #4c85f7);
+    border-bottom: 4px solid #4c85f7;
+    padding: 30px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Seção principal com chamada */
 .chamada {
-    background: rgb(184, 156, 213);
-    padding-bottom: 80px;
-    padding-top: 80px;
-    display: flex;
-    justify-content: center;
+    background: linear-gradient(45deg, #b89cd5, #8f6dc1);
+    padding: 100px 50px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Texto dentro da chamada */
-.chamada-texto {
-    margin-right: 5%;
+.chamada h1 {
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.chamada p {
+    font-size: 22px;
+    color: #f1f1f1;
+    line-height: 1.8;
+    margin-bottom: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Títulos principais */
-h1 {
-    font-size: 40px;
-}
-
-/* Parágrafos */
-p {
-    font-size: 20px;
+h1, h2 {
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
 }
 
 /* Seção de categorias de vídeos */
 .categoria-videos {
     display: flex;
     overflow-x: auto;
-    gap: 10px;
+    gap: 20px;
+    padding: 30px 0;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Cada categoria */
 .categoria {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px;
     margin-top: 50px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categoria:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* Imagens de vídeos */
 .categoria-videos img {
-    opacity: 0.5;
-    height: 200px;
-    transition: opacity 0.3s ease, border 0.3s ease;
+    opacity: 0.75;
+    height: 220px;
+    width: 300px;
+    border-radius: 15px;
+    transition: opacity 0.3s ease, transform 0.3s ease, border 0.3s ease;
 }
 
-/* Efeito hover nas imagens */
 .categoria-videos img:hover {
-    opacity: 1.0;
-    border: 3px solid green;
+    opacity: 1;
+    transform: scale(1.05);
+    border: 4px solid #4c85f7;
 }
 
 /* Títulos das categorias */
 .categoria h2 {
-    color: rgb(42, 122, 228);
+    color: #4c85f7;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
-/* Estilo personalizado para o nome Natan Emerenciano */
+/* Efeito de texto para o nome NatanFlix */
 footer {
     text-align: center;
-    padding: 20px;
-    background: rgb(42, 122, 228);
-    color: white;
-    font-size: 18px;
+    padding: 30px;
+    background: #4c85f7;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 2px;
     margin-top: 50px;
+    border-top: 5px solid #2a7ae4;
 }
 
 footer a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: rgb(184, 156, 213);
+    color: #b89cd5;
 }
+
+/* Efeito de fade e transformação no hover do footer */
+footer a:hover {
+    text-shadow: 0 0 10px rgba(184, 156, 213, 0.6);
+}
+
+/* Adicionando animação de entrada na chamada */
+.chamada {
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Keyframes para animação de fadeInUp */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
